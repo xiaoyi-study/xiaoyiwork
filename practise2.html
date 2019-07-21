@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>timetable</title>
+<style>
+.table{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #aaaaaa;
+    width: 600px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #222222;
+    height: 50px;
+    border-bottom:1px solid #aaaaaa;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-bottom:1px solid #aaaaaa;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-one, .content-two{
+    display: flex;
+}
+
+.morning, .afternoon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 150px;
+    font-size: 16px;
+    border-right:1px solid #aaaaaa;
+}
+
+.morning{
+    border-bottom:1px solid #aaaaaa;
+}
+
+.afternoon{
+    border-top:1px solid #aaaaaa;
+}
+
+.line, .line4{
+    display: flex;
+    flex-direction: column;
+}
+
+.line1, .line2, .line3, .line5, .line6, .line7{
+    height: 50px;
+    width: 500px;
+}
+
+.line1, .line2, .line3, .line5, .line6{
+    border-bottom:1px solid #aaaaaa;
+}
+
+</style>
+</head>
+<body>
+<div class="table">
+    <div class="title">课程表</div>
+    <div class="header">
+       <div>日期</div>
+       <div>星期一</div>
+       <div>星期二</div>
+       <div>星期三</div>
+       <div>星期四</div>
+       <div>星期五</div>
+    </div>
+    <div class="content">
+        <div class="content-one">
+            <div class="morning">上午</div>
+            <div class="line">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <div class="content-two">
+            <div class="afternoon">下午</div>
+            <div class="line4">
+                <div class="line5"></div>
+                <div class="line6"></div>
+                <div class="line7"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

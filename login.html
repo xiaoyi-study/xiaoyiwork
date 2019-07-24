@@ -6,59 +6,61 @@
     body{
         margin: 0
     }
-    
-    .header{
-        display: flex;
-        flex-direction: column;
-        background-image: url(https://img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg);
-        background-size:cover;
-        background-repeat: no-repeat;
-    }
 
-    .header__navbar{
+    .header{
         display: flex;
         justify-content: space-around;
         align-items: center;
         position: fixed;
+        top:20px;
         width: 100%;
+        height: 30px;
         
     }
     
-    .header__navbar__logo{
+    .header__logo{
         background-image: url(https://img.alicdn.com/tps/TB17ghmIFXXXXXAXFXXXXXXXXXX.png);
         background-size:70px;
         height: 25px;
         width: 70px;
         position: absolute;
         left:140px;
-        top: 20px;
     }
 
-    .header__navbar__entrance{
+    .header__entrance{
         position: absolute;
         right:140px;
-        top: 20px;
     }
 
 
-    .header__navbar__entrance__state{
+    .header__entrance__state{
         font-family: Arial, Helvetica, sans-serif;
         color: #BFBFBF;
         font-size: 12px;
     }
 
 
-    a.header__navbar__entrance__fastlogin{font-size: 12px;}
-    a.header__navbar__entrance__fastlogin:link {color:#ffffff;text-decoration: none;}
-    a.header__navbar__entrance__fastlogin:visited {color:#ffffff;text-decoration: none;}
-    a.header__navbar__entrance__fastlogin:hover {color:#1cabeb;text-decoration: none;}
+    a.header__entrance__fastlogin{font-size: 12px;}
+    a.header__entrance__fastlogin:link {color:#ffffff;text-decoration: none;}
+    a.header__entrance__fastlogin:visited {color:#ffffff;text-decoration: none;}
+    a.header__entrance__fastlogin:hover {color:#1cabeb;text-decoration: none;}
+
+    .backgroud{
+        background-image: url(https://img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg);
+        background-size:cover;
+        position: absolute;
+        bottom: 70px;
+        width: 100%;
+        height: 100%;
+    }
 
     .body{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 616px;
+        height:616px;
+        width: 100%;
     }
 
     .body__slogan{
@@ -187,14 +189,14 @@
 </style>
 </head>
 <body>
-<div class=header>
-    <div class="header__navbar">
-        <div class="header__navbar__logo"></div>
-        <div class="header__navbar__entrance">
-            <span class=header__navbar__entrance__state>我已有支付宝账户</span>
-            <a class="header__navbar__entrance__fastlogin" href="http://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fwww.alipay.com%2F" target="_blank">快速登录</a>
+    <div class="backgroud"></div>
+    <div class="header">
+        <div class="header__logo"></div>
+        <div class="header__entrance">
+            <span class=header__entrance__state>我已有支付宝账户</span>
+            <a class="header__entrance__fastlogin" href="http://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fwww.alipay.com%2F" target="_blank">快速登录</a>
         </div>
-    </div>
+    </div>   
     <div class="body">
         <div class="body__slogan"></div>
         <div class="body__button">
@@ -211,8 +213,7 @@
                         <span class=personal-login>我是个人用户</span>
                 </div>
         </div>       
-    </div>
-</div>     
+    </div>     
     <div class=footer>
         <div class="footer__link">
             <a href="http://www.antfin.com/" target="_blank">蚂蚁金服集团</a>

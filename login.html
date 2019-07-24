@@ -21,8 +21,7 @@
         align-items: center;
         position: fixed;
         width: 100%;
-        top: 20px;
-        left: 0px;
+        
     }
     
     .logo{
@@ -30,6 +29,9 @@
         background-size:70px;
         height: 25px;
         width: 70px;
+        position: absolute;
+        left:140px;
+        top: 20px;
     }
 
     .state{
@@ -37,6 +39,13 @@
         color: #BFBFBF;
         font-size: 12px;
     }
+
+    .entrance{
+        position: absolute;
+        right:140px;
+        top: 20px;
+    }
+
     a.fastlogin{font-size: 12px;}
     a.fastlogin:link {color:#ffffff;text-decoration: none;}
     a.fastlogin:visited {color:#ffffff;text-decoration: none;}
@@ -72,8 +81,6 @@
 
     .title{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         height: 50px;
         width: 170px;
         font-family: Arial, Helvetica, sans-serif;
@@ -89,6 +96,9 @@
         background-image:url(https://zos.alipayobjects.com/rmsportal/neqhNGwxBXBmhVY.png);
         background-size:24px;
         background-repeat: no-repeat;
+        position: absolute;
+        left: 30px;
+        top:13px;
     }
     .business {
         width:24px;
@@ -96,6 +106,9 @@
         background-image:url(https://img.alicdn.com/tps/TB12JNkIFXXXXXBXXXXXXXXXXXX.png);
         background-size:24px;
         background-repeat: no-repeat;
+        position: absolute;
+        left:230px;
+        top:13px;
     }
     .personal{
         width:24px;
@@ -103,6 +116,31 @@
         background-image:url(https://img.alicdn.com/tps/TB1uh30IpXXXXXKXVXXXXXXXXXX.png);
         background-size:24px;
         background-repeat: no-repeat;
+        position: absolute;
+        left:430px;
+        top:13px;
+
+    }
+
+    .coopration-login{
+        position:absolute;
+        top:15px;
+        right:430px;
+        letter-spacing: 2px;
+    }
+
+    .business-login{
+        position:absolute;
+        top:15px;
+        right:230px;
+        letter-spacing: 2px;
+    }
+
+    .personal-login{
+        position:absolute;
+        top:15px;
+        right:30px;
+        letter-spacing: 2px;
     }
 
     .footer{
@@ -144,15 +182,15 @@
         <div class="button">
                 <div class=title>
                         <i class="coopration"></i>
-                        <span>我是合作伙伴</span>
+                        <span class=coopration-login>我是合作伙伴</span>
                 </div>
                 <div class=title>
                         <i class="business"></i>
-                        <span>我是商家用户</span>
+                        <span class=business-login>我是商家用户</span>
                 </div>
                 <div class=title>
                         <i class="personal"></i>
-                        <span>我是个人用户</span>
+                        <span class=personal-login>我是个人用户</span>
                 </div>
         </div>       
     </div>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>花瓣</title>
+ <style>
+    div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td ,body{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;    
+    }
+
+    .header{
+        display: grid;
+        grid-template-columns: 6.6% 86.8% 6.6%;
+        grid-template-rows: 48px 164px 40px 30px 198px;
+        height: 480px;
+        width: 100%;
+        background: #444444;
+        background-size:cover;
+    }
+    
+
+    .header__box{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+    }
+
+
+    .header__box__top__left{
+        display: flex;
+        justify-content: space-between;
+        width: 622.062px;
+        height: 29px;
+        margin-top:10px;
+        position: fixed;
+        left: 6.6%;  
+        position: fixed;
+        top:0;
+         
+    }
+
+    .header__box__left__navbar__logo{
+        background-image:url(/img/logo_wt.svg);
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 28px;
+        background-size:80px;
+        margin-right: 20px;
+    }
+
+    .header__box__left__navbar__home{
+        border-bottom:#ffffff 1px solid; 
+        margin-right: 25px;
+        white-space: nowrap;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:14px;
+    }
+    a.header__box__left__navbar__home:link {color:#ffffff; text-decoration: none;}
+    a.header__box__left__navbar__home:visited {color: #ffffff;text-decoration: none;}
+    a.header__box__left__navbar__home:hover {color: #ffffff;text-decoration: none;}
+
+    .header__box__left__navbar__item{
+        margin-right: 25px;
+        white-space: nowrap;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:14px;
+    }
+    a.header__box__left__navbar__item:link {color: #ffffff;text-decoration: none;}
+    a.header__box__left__navbar__item:visited {color: #ffffff;text-decoration: none;}
+    a.header__box__left__navbar__item:hover {color: #ffffff;text-decoration: none;}
+
+    .header__box__left__navbar__itemcut{
+        width: 1px;
+        height: 20px;
+        background-color: #dddddd;
+        margin: 2.5px 20px 2.5px -5px;
+    }
+
+    .header__box__right{
+        width: 130px;
+        text-align: right;
+        position:fixed;
+        right:6.6%
+
+    }
+
+    .header__box__right__login{
+        width: 130px;
+        height: 34px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__box__right__login__bounce{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ffffff;
+        padding: 0 15px;
+        margin-right:10px; 
+        border-radius: 2px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    
+    a.header__box__right__login__bounce:link{text-decoration: none;color: #ffffff}
+    a.header__box__right__login__bounce:visited{text-decoration: none;color: #ffffff}
+    a.header__box__right__login__bounce:hover{text-decoration: none;color: #ffffff}
+
+    .header__box__right__login__register{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ec414d;
+        background: #ec414d;
+        padding: 0 15px; 
+
+        border-radius: 2px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .header__slogan{
+        margin: 70px auto 40px ;
+        width: 540px;
+        height: 54px;
+        font-size:44px;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        top:48px;
+        left: 0;
+        right: 0;
+        bottom:40px;
+
+    }
+
+    a.header__box__right__login__register:link{text-decoration: none;color: #ffffff}
+    a.header__box__right__login__register:visited{text-decoration: none;color: #ffffff}
+    a.header__box__right__login__register:hover{text-decoration: none;color: #ffffff}
+
+    .header__search{
+        height: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:212px;
+        right: 0;
+        left:0;
+    }
+
+    .header__search__unit{
+        width: 536px;
+        height:40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+
+    .query{
+        width: 536px;
+        height:40px;
+        padding:0 10px;
+        border: 1px rgba(255,255,255,.95);
+        border-radius:2px ;
+        color:#444444;
+        font-size:14px; 
+    }
+
+    .header__hotwords{
+        height:20px;
+        margin-top:10px;
+        text-align: center; 
+        color:rgba(255,255,255,.7);
+        font-size:14px;
+        position: absolute;
+        top:256px;
+        left:0px;
+        right:0;
+    }
+    a:link{text-decoration: none; color:#ffffff}
+    a:visited{text-decoration: none; color:#ffffff}
+    a:hover{text-decoration:underline; color:#ffffff}
+
+    .header__author{
+        height:20px;
+        font-size:14px;
+        color:#ffffff;
+        margin: 0 auto;
+        position: absolute;
+        top:440px;
+        right:6.6%;
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 6.6% 86.8% 6.6%;
+        grid-template-rows: 62px 178px 62px 1551px 82px 49px 224px;
+        justify-content: center; 
+        position: absolute;
+        top:480px;
+        left:0;
+        right:0;
+    }
+
+    .content__recommend{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 22px;
+        padding:20px 0;
+        font-size: 16px;
+        color: #999999;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        right:0;
+        left:0;
+    }
+
+    .content__recommend__line1{
+        border-top: 1px solid #ededed;
+        width: 38%;
+        position: absolute;
+        left:6.6%;
+    }
+
+    .content__recommend__line2{
+        border-top: 1px solid #ededed;
+        width: 38%;
+        position: absolute;
+        right:6.6%;
+    }
+
+    .content__image-box{
+        display:inline-grid;
+        grid-template-columns:repeat(5,236px);
+        grid-template-rows:170px;
+        grid-column-gap:16;
+        position: absolute;
+        top:62px;
+        left:6.6%;
+        right:6.6%;
+    }
+
+    .content__image-box__imageone .content__image-box__imagetwo .content__image-box__imagethree .content__image-box__imagefour .content__image-box__imagefive
+    {   height: 170px;
+        width: 236px;  
+    }
+
+    .i-amphtml-fill-content{
+        height: 170px;
+        width: 236px;  
+    }
+ 
+    .content__recommend1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 22px;
+        padding:20px 0;
+        font-size: 16px;
+        color: #999999;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        right:0;
+        left:0;
+        top:240px;
+    }
+
+    .content__recommend1__line1{
+        border-top: 1px solid #ededed;
+        width: 38%;
+        position: absolute;
+        right:6.6%;
+    }
+
+    .content__recommend1__line2{
+        border-top: 1px solid #ededed;
+        width: 38%;
+        position: absolute;
+        left:6.6%;
+    }
+
+    .content__picture{
+        display:inline-grid;
+        grid-template-columns:repeat(4,307px);
+        grid-template-rows:repeat(5,307px);
+        grid-row-gap: 4px;
+        grid-column-gap:4px;
+        position: absolute;
+        top:306px;
+        right:6.6%;
+        left:6.6%;
+    }
+
+    .content__recommend2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 42px;
+        padding:20px 0;
+        font-size: 16px;
+        color: #999999;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        right:0;
+        left:0;
+        top:1853px;
+    }
+
+    .content__recommend2__more{
+        height: 22px;
+        width: 40%;
+        padding:10px;
+        background-color: #f7f7f7;
+        text-align: center;
+    }
+
+    .content__recommend2__line1{
+        border-top: 1px solid #ededed;
+        width: 21%;
+        position: absolute;
+        left:6.6%;
+    }
+
+    .content__recommend2__line2{
+        border-top: 1px solid #ededed;
+        width: 21%;
+        position: absolute;
+        right:6.6%;
+    }
+
+    .content__bottom{
+        position: absolute;
+        top:1935px;
+        left:0;
+        right:0;
+        height: 273px;
+    }
+    
+    .new-index-category-headclearfix{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 22px;
+        width: 86.6%;
+        padding-bottom:5px;
+        border-bottom: 2px solid #ededed;
+        margin-bottom:20px;
+        position: absolute;
+        left: 6.6%;
+        right:6.6%;
+   }
+
+   a.all{
+       font-size:16px;
+   }
+   a.all:link{text-decoration: none;color: #9e7e6b}
+   a.all:visited{text-decoration: none;color: #9e7e6b}
+   a.all:hover{text-decoration: underline;color: #9e7e6b}
+
+   .title{
+       font-size:16px;
+       color:#444;
+   }
+
+   .content__bottom__navbar{
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        grid-template-rows: 193px;
+        position: absolute;
+        left:6.6%;
+        right:6.6%;
+        bottom:22px;
+   }
+
+   a.item1:link{text-decoration: none;color: #222}
+   a.item1:hover{text-decoration: underline;color: #8d1a10}
+   a.item1{font-size: 14px;}
+
+   .content__bottom__navbar__group{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: flex-start;
+   }
+
+   a.item2:link{text-decoration: none;color: #222}
+   a.item2:hover{text-decoration: underline;color: #8d1a10}
+   a.item2{font-size: 14px;}
+
+   .content__bottom__navbar__group__item1{
+       margin-bottom:6px; 
+   }
+
+   .footer{
+       display: grid;
+       grid-template-columns: 6.6% 86.6% 6.6%;
+       grid-template-rows: 202px 60px;
+       position: absolute;
+       top:2688px;
+       left:0;
+       right:0;
+       background-color:#333; 
+   }
+
+   
+    .footer__wrapper{
+        display: flex;
+        justify-content: space-between;
+        height: 127px;
+        width: 600px;
+        position: absolute;
+        left: 6.6%;
+        right:6.6%;
+        bottom:95px;
+    }
+
+    .column1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 200px;
+    }
+
+    .column2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 200px;
+    }
+
+    .column3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 200px;
+    }
+
+    .follow-us{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 127px;
+        width: 248px;
+        padding: 30px;
+        border: 1px solid #555;
+        border-width: 0 1px;
+        position: absolute;
+        right:6.6%;
+        bottom:65px;
+    }
+
+    a.title{font-size: 16px;color: #ddd;}
+    a.title:link{text-decoration: none;color: #ddd }
+    a.title:hover{text-decoration:none;color: #ddd}
+
+    a.item3{font-size:14px;}
+    a.item3:link{text-decoration: none;color: #bbb }
+    a.item3:hover{text-decoration:none;color: #ddd}
+
+    a.item4{font-size:14px;}
+    a.item4:link{text-decoration: none;color: #bbb }
+    a.item4:hover{text-decoration:none;color: #ddd}
+
+    .footer__wrapper-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        position:absolute;
+        top:2890px;
+        bottom: 0;
+        color: #999;
+        font-size: 14px;
+        background-color:#000;
+    }
+    .icon{font-size:14px;}
+    a.icon:link{text-decoration: none;color: #999}
+    a.icon:hover{text-decoration: underline;color: #999}
+
+    .message{font-size:14px;}
+    a.message:link{text-decoration: none;color: #999}
+    a.message:hover{text-decoration: underline;color: #999}
+ </style>
+</head>
+<body>
+        <div class="banner-background" style="background-image: url(&quot;//hbfile.huabanimg.com/img/home/banner/67cf4b813d1ab963cc8fa55214c55b6b03095207af019&quot;); opacity: 1;"></div>
+    <div class="header">
+        <div class="header__box">
+                <div class="header__box__top__left">
+                        <a href="https://huaban.com/" class="header__box__left__navbar__logo"></a>
+                        <a href="https://huaban.com/" class="header__box__left__navbar__home">首页</a>
+                        <a href="/discovery/" class="header__box__left__navbar__item">发现</a>
+                        <a href="/all/" class="header__box__left__navbar__item">最新</a>
+                        <div class="header__box__left__navbar__more"></div>
+                        <a class="header__box__left__navbar__itemcut"></a>
+                        <a href="/activities/" class="header__box__left__navbar__item">活动</a>
+                        <a href="http://www.meisupic.com/?hmsr=hbnavi" class="header__box__left__navbar__item">美素</a>
+                        <a href="/all/" class="header__box__left__navbar__item">设计服务</a>
+                        <a href="/all/" class="header__box__left__navbar__item">花瓣Live</a>
+                        <a href="/all/" class="header__box__left__navbar__item">花瓣Pro</a>
+                </div>
+                <div class="header__box__right">
+                    <div class="header__box__right__login">
+                        <a href="#" class="header__box__right__login__bounce"><span class="text">登录</span></a>
+                        <a href="/signup/" class="header__box__right__login__register"><span class="text"></span>注册</span></a>
+                    </div>
+                </div> 
+            </div> 
+        </div>     
+        <div class="header__slogan">花瓣，陪你做生活的设计师</div>
+        <div class="header__search">
+            <form method="GET" action="/search/" class="header__search__unit">
+                <input type="text" placeholder="搜索你喜欢的" class="query">
+                <a href="#" class="header__search__go"></a>
+            </form>
+        </div>
+        <div class="header__hotwords">
+            <span>热门搜索：</span>
+            <a href="http://huaban.com/explore/kantugou">看图购</a>
+            <span>,</span>
+            <a href="http://huaban.com/explore/hongsexisheying">红色系</a>
+        </div>
+        <div class="header__author">
+            <span>图片：</span>
+            <a href="/btxzdura8t/" rel="nofollow">布林YQ</a>
+        </div>    
+    </div>
+    <div class="content">
+        <div class="content__recommend">
+            <div class="content__recommend__line1"></div>
+            <span>大家正在关注</span>
+            <div class="content__recommend__line2"></div>
+        </div>
+        <div class="content__image-box">
+            <div class="content__image-box__imageone">
+                <img alt="" class="i-amphtml-fill-content" decoding="async" src="https://tpc.googlesyndication.com/simgad/4743002249043263605">
+            </div>
+            <a href="/explore/duoroushoupenghua/" target="_self" class="content__image-box__imagetwo">
+                <div class="content__image-box__imagetwo__blur">
+                    <img src="//hbimg.huabanimg.com/2ea6c064d9e55464693362dd04f92d34b025a97149898-DXOvws_sq236bl4" data-baiduimageplus-ignore="1">
+                </div>
+                <div class="content__image-box__imagetwo__title">多肉手捧花</div>
+            </a>
+            <a href="https://www.gaoding.com/utms/d70fe25d2c887f8ba5f8024a4724544e" target="_target" data-title="稿定二季度投放" class="content__image-box__imagethree">
+                <img data-title="稿定二季度投放" src="//hbimg-other.huabanimg.com/img/promotion/e9653a2764fd2024400fb24174763e5c4ad4b5d12e447" data-baiduimageplus-ignore="1">
+            </a>
+            <a href="/explore/yaoguoxiaren/" target="_self" class="content__image-box__imagefour">
+                <div class="content__image-box__imagefour__blur">
+                    <img src="//hbimg.huabanimg.com/f5077791881382a53601be41ee521862814945ec6d1d5-HtMf4x_sq236bl4" data-baiduimageplus-ignore="1">
+                </div>
+                <div class="content__image-box__imagefour__title">腰果虾仁</div>
+            </a>
+            <a href="https://www.gaoding.com/utms/d70fe25d2c887f8ba5f8024a4724544e" target="_target" data-title="稿定二季度投放" class="content__image-box__imagefive">
+                <img data-title="稿定二季度投放" src="//hbimg-other.huabanimg.com/img/promotion/e9653a2764fd2024400fb24174763e5c4ad4b5d12e447" data-baiduimageplus-ignore="1">
+            </a>
+        </div>
+        <div class="content__recommend1">
+            <div class="content__recommend1__line1"></div>
+            <span>为您推荐</span>
+            <div class="content__recommend1__line2"></div>
+        </div>
+        <div class="content__picture">
+            <div class="content__picture__line1">  
+                <div class="content__picture1">
+                    <a href="/boards/3265106/">
+                        <img src="https://hbimg.huabanimg.com/65349c1299c1acf6ea9cc19d26207cdf6dcd1a6512e544-rnAczv_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px ">
+                    </a>
+                </div>
+                <div class="content__picture2"></div>
+                <div class="content__picture3">
+                    <a href="/boards/3265106/">
+                        <img src="https://hbimg.huabanimg.com/da18980d40b20a4f9d1efa654cffc60187c8beb824685d-aaLhD2_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px">
+                    </a>
+                </div>
+                <div class="content__picture4">
+                    <a href="https://huaban.com/boards/15087215/">
+                        <img src="https://hbimg.huabanimg.com/fe3a36c75f62a5c073fbc7ca38e272f47fc859e346d7e-ru3UAr_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px ">
+                    </a>
+                    <div class="content__picture4__rightbox">
+                        <h2><a href="https://huaban.com/boards/15087215/">包装</a></h2>
+                        <p><span>2736 采集</span>
+                           <span>666 粉丝</span>
+                        </p>
+                    </div>
+                    <div class="content__picture4__recommend-data board"></div>    
+                </div>
+            </div>
+            <div class="content__picture__line2">      
+                <div class="content__picture5">
+                    <a href="/boards/15087215/">
+                        <img src="https://hbimg.huabanimg.com/46a7959d55843c51bc83150802ea443a86d306d0c8a33-pMlMsv_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px">
+                    </a>
+                    <div class="content__picture5__rightbox">
+                        <h2><a href="/boards/15087215/">app包装</a></h2>
+                        <p><span>4085 采集</span>
+                        <span>2068 粉丝</span>
+                        </p>
+                    </div>
+                    <div class="content__picture5__recommend-data board"></div>
+                </div>
+                <div class="content__picture6">
+                    <a href="/aoxknuwg7c/" class="content__picture6__avt">
+                        <img src="https://hbimg.huabanimg.com/ec02d86fc4667f9557eb9e087558204b9c9388eabacb-dZzSK6_sq140sf" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px">
+                    </a>
+                    <a class="content__picture6__avt__bg"></a>
+                </div>
+                <div class="content__picture7"></div>
+                <div class="content__picture8">
+                    <a href="/boards/52506404/">
+                        <img src="https://hbimg.huabanimg.com/8af671f9aec1e0a9c55ee987e979f30ac2927817da75-CGKBqd_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px">
+                    </a>
+                </div>
+            </div>
+            <div class="content__picture__line3"> 
+                <div class="content__picture9">
+                    <a href="/boards/52755542/">
+                        <img src="https://hbimg.huabanimg.com/04c4cfce15495461f83edc389cd2a38ccb4aeba84a464-WpGrBI_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px">
+                    </a>
+                </div>
+                <div class="content__picture10"></div>
+                <div class="content__picture11">
+                    <a href="/boards/24175785/">
+                        <img src="https://hbimg.huabanimg.com/b76ccead37c7cebced606679a5e9575c8bf2b986600b-TOniLO_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px">
+                    </a>
+                </div>
+                <div class="content__picture12">
+                    <a href="/boards/14180908/">
+                        <img src="https://hbimg.huabanimg.com/e78bce6377f3ea3ea71d4be264665f6bb74d6a2861073-Dbtxak_fw658" data-baiduimageplus-ignore="1"
+                        style="height: 307px; width:307px">
+                    </a>
+                    <div class="content__picture12__rightbox">
+                        <h2><a href="/boards/15087215/">生而为魔又怎样</a></h2>
+                        <p><span>406 采集</span>
+                        <span>13794 粉丝</span>
+                        </p>
+                    </div>
+                    <div class="content__picture12__recommend-data board"></div>
+                </div>
+            </div>         
+            <div class="content__picture__line4"> 
+                <div class="content__picture13">
+                    <a href="/boards/39546927/">
+                    <img src="https://hbimg.huabanimg.com/0881c98d40d09d4218b3ac710d7af7ad3c808d2616cde1-FiCyCj_fw658" data-baiduimageplus-ignore="1"
+                    style="height: 307px; width:307px">
+                    </a>
+                    <div class="content__picture13__rightbox">
+                        <h2><a href="/boards/39546927/">你喜欢的紫色</a></h2>
+                        <p><span>313 采集</span>
+                        <span>504 粉丝</span>
+                    </p>
+                    </div>
+                <div class="content__picture13__recommend-data board"></div>
+                </div>    
+                <div class="content__picture14">
+                    <a href="/boards/16955825/">
+                    <img src="https://hbimg.huabanimg.com/f9142bfa22968e778026b5c4d720295a32c08bbc26df0-tIP2I4_fw658" data-baiduimageplus-ignore="1"
+                    style="height: 307px; width:307px">
+                    </a>
+                </div>
+                <div class="content__picture15"></div>
+                <div class="content__picture16">
+                    <a href="/boards/15627261/">
+                    <img src="https://hbimg.huabanimg.com/6ed231f0a5176457b6e5e34dae3f3ef4bcc21fe116c2ed-FhkiFp_fw658" data-baiduimageplus-ignore="1"
+                    style="height: 307px; width:307px">
+                    </a>
+                </div>
+            </div>
+            <div class="content__picture__line5"> 
+                <div class="content__picture17">
+                    <a href="/boards/19150667/">
+                    <img src="https://hbimg.huabanimg.com/60a38fb6665604f558fdc080a59544667fe8a62223fc22-UE6fv9_fw658" data-baiduimageplus-ignore="1"
+                    style="height: 307px; width:307px">
+                    </a>
+                </div>
+                <div class="content__picture18"></div>
+                <div class="content__picture19">
+                    <a href="/boards/20055874/">
+                    <img src="https://hbimg.huabanimg.com/40090d19dfa2ac1994133c5f486bcbc6a919f8a38a70-9JMBq9_fw658" data-baiduimageplus-ignore="1"
+                    style="height: 307px; width:307px">
+                    </a>
+                </div>
+                <div class="content__picture20">
+                    <a href="/boards/14293190/">
+                    <img src="https://hbimg.huabanimg.com/112815e27df4c06368b35611e117aeab5f20868c7a6e-2HaDz2_fw658" data-baiduimageplus-ignore="1"
+                    style="height: 307px; width:307px">
+                    </a>
+                    <div class="content__picture20__rightbox">
+                        <h2><a href="/boards/14293190/">你喜欢的紫色</a></h2>
+                        <p><span>377 采集</span>
+                        <span>20424 粉丝</span>
+                        </p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="content__recommend2">
+            <div class="content__recommend2__line1"></div>
+            <div class="content__recommend2__more">加载更多</div>
+            <div class="content__recommend2__line2"></div>
+        </div>
+        <div class="content__bottom">
+            <div class="new-index-category-headclearfix">
+                <div class="title">以分类浏览花瓣</div>
+                <div class="all-pins">
+                    <a href="/all/" class="all">所有采集 »</a>
+                </div>
+            </div>
+            <div class="content__bottom__navbar">
+                <ul class="content__bottom__navbar__group">
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/web_app_icon/" class="item1">UI/UX</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/design/" class="item1">平面</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/illustration/" class="item1">插画/漫画</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/home/" class="item1">家居/家装</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/apparel/" class="item1">女装/搭配</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/men/" class="item1">男士/风尚</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/wedding_events/" class="item1">婚礼</a>
+                    </li>
+                </ul>
+                <ul class="content__bottom__navbar__group">
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/industrial_design/"class="item1">工业设计</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/photography/"class="item1">摄影</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/modeling_hair/"class="item1">造型/美妆</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/food_drink/"class="item1">美食</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/travel_places/"class="item1">旅行</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/diy_crafts/"class="item1">手工/布艺</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/fitness/"class="item1">健身/舞蹈</a>
+                    </li>
+                </ul>
+                <ul class="content__bottom__navbar__group">
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/kids/"class="item1">儿童</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/pets/"class="item1">宠物</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/quotes/"class="item1">美图</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/people/"class="item1">明星</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/beauty/"class="item1">美女</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/desire/"class="item1">礼物</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/geek/"class="item1">极客</a>
+                    </li>
+                </ul>
+                <ul class="content__bottom__navbar__group">
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/anime/"class="item1">动漫</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/architecture/"class="item1">建筑设计</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/art/"class="item1">人文艺术</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/data_presentation/"class="item1">数据图</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/games/"class="item1">游戏</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/cars_motorcycles/"class="item1">汽车/摩托</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item">
+                        <a href="/favorite/film_music_books/"class="item1">电影/图书</a>
+                    </li>
+                </ul>
+                <ul class="content__bottom__navbar__group1">
+                    <li class="content__bottom__navbar__group__item1">
+                        <a href="/favorite/tips/"class="item2">生活百科</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item1">
+                        <a href="/favorite/education/"class="item2">教育</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item1">
+                        <a href="/favorite/sports/"class="item2">运动</a>
+                    </li>
+                    <li class="content__bottom__navbar__group__item1">
+                        <a href="/favorite/funny/"class="item2">搞笑</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+    </div>    
+    <div class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__wrapper-996"></div>
+                <div class="column1">
+                    <a href="/" class="title">花瓣首页</a>
+                    <a href="/about/goodies/" rel="nofollow" class="item3">花瓣采集工具</a>
+                    <a href="https://blog.huaban.com/"class="item3">花瓣官方博客</a>
+                    <a href="/about/jubao/" rel="nofollow"class="item3">违规有害信息举报</a>
+                </div>
+                <div class="column2">
+                    <a class="title">联系与合作</a>
+                    <a href="/about/contact/" rel="nofollow"class="item3">联系我们</a>
+                    <a href="/pins/53553/" rel="nofollow"class="item3">用户反馈</a>
+                    <a href="/about/brand/" rel="nofollow"class="item3">花瓣 LOGO 标准文档</a>
+                </div>
+                <div class="column3">
+                    <a class="title">移动客户端</a>
+                    <a href="/apps/#iphone" rel="nofollow"class="item3">花瓣 iPhone 版</a>
+                    <a href="/apps/#android" rel="nofollow"class="item3">花瓣 Android 版</a>
+                    <a href="/apps/#ipad" rel="nofollow"class="item3">花瓣 HD</a>
+                </div>
+            </div>
+            <div class="follow-us">
+                <a class="title">关注我们</a>
+                <a href="http://weibo.com/huabanwang" target="_blank" rel="nofollow"class="item4">新浪微博：@花瓣网</a>
+                <a href="http://weibo.com/huabanwang" class="item4">联系客服：在线客服</a>
+                <a href="http://weibo.com/huabanwang" class="item4">官方微信：
+                    <img src="/img/about/about_footer_code.png" data-baiduimageplus-ignore="1">
+                    <img src="/img/about/weixin_huaban.png" data-baiduimageplus-ignore="1" class="code">
+                </a>
+            </div>
+        </div>
+        <div class="footer__wrapper-bottom">
+            <div class="footer__wrapper-bottom__bar">
+                <span>© Huaban 杭州纬音智网络有限公司</span>&nbsp;&nbsp;
+                <span class="divider">|</span>
+                <img src="/img/ic_record.png" alt="备案图标">
+                <a target="_blank" class="icon" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602001880">浙公网安备 33010602001880号 &nbsp;&nbsp;</a>
+                <span class="divider">|</span>
+                <a target="_blank" class="message"href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602001880">备案信息: 浙B2-20110282-7</a>
+            </div>
+        </div>
+    </div>             
+</body>
+</html>

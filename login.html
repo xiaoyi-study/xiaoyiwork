@@ -2,248 +2,80 @@
 <html lang="en">
 <head>
     <title>支付宝</title>
-<style>
-    body{
-        margin: 0
-    }
-
-    .header{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: fixed;
-        top:20px;
-        width: 100%;
-        height: 30px;
-        
-    }
-    
-    .header__logo{
-        background-image: url(https://img.alicdn.com/tps/TB17ghmIFXXXXXAXFXXXXXXXXXX.png);
-        background-size:70px;
-        height: 25px;
-        width: 70px;
-        position: absolute;
-        left:140px;
-    }
-
-    .header__entrance{
-        position: absolute;
-        right:140px;
-    }
-
-
-    .header__entrance__state{
-        font-family: Arial, Helvetica, sans-serif;
-        color: #BFBFBF;
-        font-size: 12px;
-    }
-
-
-    a.header__entrance__fastlogin{font-size: 12px;}
-    a.header__entrance__fastlogin:link {color:#ffffff;text-decoration: none;}
-    a.header__entrance__fastlogin:visited {color:#ffffff;text-decoration: none;}
-    a.header__entrance__fastlogin:hover {color:#1cabeb;text-decoration: none;}
-
-    .backgroud{
-        background-image: url(https://img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg);
-        background-size:cover;
-        position: absolute;
-        bottom: 70px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height:616px;
-        width: 100%;
-    }
-
-    .body__slogan{
-        width:600px;
-        height:200px;
-        background-image:url(https://img.alicdn.com/tps/TB1POhqIFXXXXXbXFXXXXXXXXXX.png);
-        background-size:600px;
-        background-repeat: no-repeat;
-        position: absolute;
-        top:138px;
-        
-        }
-
-    .body__button{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 600px;
-        position: absolute;
-        top:355px;
-    }
-
-    .title{
-        display: flex;
-        height: 50px;
-        width: 170px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        color:#ffffff;
-        background: #00a3ee;
-        border-radius: 8px;
-    }
-
-    .coopration {
-        width:24px;
-        height:24px;
-        background-image:url(https://zos.alipayobjects.com/rmsportal/neqhNGwxBXBmhVY.png);
-        background-size:24px;
-        background-repeat: no-repeat;
-        position: absolute;
-        left: 30px;
-        top:13px;
-    }
-    .business {
-        width:24px;
-        height:24px;
-        background-image:url(https://img.alicdn.com/tps/TB12JNkIFXXXXXBXXXXXXXXXXXX.png);
-        background-size:24px;
-        background-repeat: no-repeat;
-        position: absolute;
-        left:230px;
-        top:13px;
-    }
-    .personal{
-        width:24px;
-        height:24px;
-        background-image:url(https://img.alicdn.com/tps/TB1uh30IpXXXXXKXVXXXXXXXXXX.png);
-        background-size:24px;
-        background-repeat: no-repeat;
-        position: absolute;
-        left:430px;
-        top:13px;
-
-    }
-
-    .coopration-login{
-        position:absolute;
-        top:15px;
-        right:430px;
-        letter-spacing: 2px;
-    }
-
-    .business-login{
-        position:absolute;
-        top:15px;
-        right:230px;
-        letter-spacing: 2px;
-    }
-
-    .personal-login{
-        position:absolute;
-        top:15px;
-        right:30px;
-        letter-spacing: 2px;
-    }
-
-    .footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        height: 65px;
-        width: 100%;
-        position: absolute;
-        top:621px;
-    }
-
-    .footer__link{
-        display: flex;
-        justify-content: space-between;
-        width: 880px;
-        height: 22px; 
-        list-style-type: none;
-    }
-
-    a{font-size: 12px;color: #666666;}
-    a:link{text-decoration: none;}
-    a:visited{text-decoration: none;}
-    a:hover{text-decoration: none;}
-
-    li{color: #666666;}
-
-    .footer__ICP{
-        position: absolute;
-        top: 20px;
-    }
-
-    .footer__logo{
-        display: flex;
-        width: 250px;
-        height: 30px;
-        background-image: url(https://img.alicdn.com/tps/TB1.cMTIpXXXXbLXVXXXXXXXXXX.png);
-        background-repeat:no-repeat;
-        background-size: 250px; 
-    }
-</style>
+    <link rel="stylesheet" type="text/css" href="login.css" />
 </head>
 <body>
-    <div class="backgroud"></div>
+    <div class="backgroud">
+        <img class="item" src="https://img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg"></img>
+        <img class="item" scr="https://img.alicdn.com/tps/TB1pfG4IFXXXXc6XXXXXXXXXXXX.jpg"></img>
+        <img class="item" scr="https://img.alicdn.com/tps/TB1sXGYIFXXXXc5XpXXXXXXXXXX.jpg"></img>
+    </div>
     <div class="header">
-        <div class="header__logo"></div>
-        <div class="header__entrance">
-            <span class=header__entrance__state>我已有支付宝账户</span>
-            <a class="header__entrance__fastlogin" href="http://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fwww.alipay.com%2F" target="_blank">快速登录</a>
+        <div class="header__nav">
+            <div class="header__nav__logo"></div>
+            <div class="header__nav__entrance">
+                <span class=header__nav__entrance__state>我已有支付宝账户</span>
+                <a class="header__nav__entrance__fastlogin" href="http://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fwww.alipay.com%2F" target="_blank">快速登录</a>
+            </div>
         </div>
     </div>   
     <div class="body">
         <div class="body__slogan"></div>
         <div class="body__button">
-                <div class=title>
-                        <i class="coopration"></i>
-                        <span class=coopration-login>我是合作伙伴</span>
+            <div class="body__button__mid">
+                <div class="body__button__mid__title">
+                    <div class="body__button__mid__title__content">
+                            <i class="body__button__mid__title__content__coopration"></i>
+                            <span class="body__button__mid__title__content__coopration-login">我是合作伙伴</span>
+                    </div>
                 </div>
-                <div class=title>
-                        <i class="business"></i>
-                        <span class=business-login>我是商家用户</span>
+                <div class="body__button__mid__title">
+                    <div class="body__button__mid__title__content">
+                            <i class="body__button__mid__title__content__business"></i>
+                            <span class=body__button__mid__title__content__business-login>我是商家用户</span>
+                    </div>
                 </div>
-                <div class=title>
-                        <i class="personal"></i>
-                        <span class=personal-login>我是个人用户</span>
+                <div class="body__button__mid__title">
+                    <div class="body__button__mid__title__content">
+                            <i class="body__button__mid__title__content__personal"></i>
+                            <span class=body__button__mid__title__content__personal-login>我是个人用户</span>
+                    </div>
                 </div>
+            </div>
         </div>       
     </div>     
     <div class=footer>
         <div class="footer__link">
-            <a href="http://www.antfin.com/" target="_blank">蚂蚁金服集团</a>
+            <ul>
+            <li><a href="http://www.antfin.com/" target="_blank">蚂蚁金服集团</a></li>
             <li>|</li>
-            <a href="http://www.alipay.com/" target="_blank">支付宝</a>
+            <li><a href="http://www.alipay.com/" target="_blank">支付宝</a></li>
             <li>|</li>
-            <a href="http://yebprod.alipay.com/yeb/index.htm" target="_blank">余额宝</a>
+            <li><a href="http://yebprod.alipay.com/yeb/index.htm" target="_blank">余额宝</a></li>
             <li>|</li>
-            <a href="http://zcbprod.alipay.com/yeb/index.htm" target="_blank">招财宝</a>
+            <li><a href="http://zcbprod.alipay.com/yeb/index.htm" target="_blank">招财宝</a></li>
             <li>|</li>
-            <a href="http://b.alipay.com/?ynsrc=zhuzhanA" target="_blank">蚂蚁商家中心</a>
+            <li><a href="http://b.alipay.com/?ynsrc=zhuzhanA" target="_blank">蚂蚁商家中心</a></li>
             <li>|</li>
-            <a href="http://b.zmxy.com.cn/index.htm?scene=alipay" target="_blank">芝麻信用</a>
+            <li><a href="http://b.zmxy.com.cn/index.htm?scene=alipay" target="_blank">芝麻信用</a></li>
             <li>|</li>
-            <a href="http://loan.mybank.cn/" target="_blank">蚂蚁微贷</a>
+            <li><a href="http://loan.mybank.cn/" target="_blank">蚂蚁微贷</a></li>
             <li>|</li>
-            <a href="http://www.mybank.cn/index.htm" target="_blank">网商银行</a>
+            <li><a href="http://www.mybank.cn/index.htm" target="_blank">网商银行</a></li>
             <li>|</li>
-            <a href="http://open.alipay.com/platform/home.htm?from=zhuzhanfooter20160818" target="blank">开放平台</a>
+            <li><a href="http://open.alipay.com/platform/home.htm?from=zhuzhanfooter20160818" target="blank">开放平台</a></li>
             <li>|</li>
-            <a href="http://job.alibaba.com/index.php" target="_blank">诚征英才</a>
+            <li><a href="http://job.alibaba.com/index.php" target="_blank">诚征英才</a></li>
             <li>|</li>
-            <a href="http://ab.alipay.com/i/lianxi.htm" target="_blank">联系我们</a>
+            <li><a href="http://ab.alipay.com/i/lianxi.htm" target="_blank">联系我们</a></li>
             <li>|</li>
-            <a href="http://global.alipay.com/index.htm" target="_blank">International Business</a>
+            <li><a href="http://global.alipay.com/index.htm" target="_blank">International Business</a></li>
+            </ul>
         </div>
         <div class=footer__ICP>
             <a href="http://fun.alipay.com/certificate/jyxkz.htm" target="blank">ICP证号：沪B2-20150087</a>
         </div>
         <div class="footer__logo"></div>
-</div> 
+    </div> 
 </body>
 </html>
